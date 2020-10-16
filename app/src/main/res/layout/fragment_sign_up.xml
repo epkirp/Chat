@@ -1,0 +1,187 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/Theme.AppCompat.Light.NoActionBar"
+                app:theme="@style/Theme.AppCompat.NoActionBar"
+                app:titleTextColor="@color/colorPrimaryDark">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="start|center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="15sp" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitleSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/sign_up"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/vLine"
+            app:layout_constraintTop_toBottomOf="@id/appBar"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <View
+            android:id="@+id/vLine"
+            android:layout_width="105dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="32dp"
+            android:background="@color/colorPink"
+            app:layout_constraintBottom_toTopOf="@id/tilEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleSignUp" />
+
+        <com.example.chat.custom_views.NoChangingBackgroundTextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            app:errorEnabled="true"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toTopOf="@id/tilPassword"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleSignUp"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:layout_editor_absoluteX="16dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_border"
+                android:drawableEnd="@drawable/ic_email"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLength="40"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorGrey"
+                android:textSize="17sp" />
+
+        </com.example.chat.custom_views.NoChangingBackgroundTextInputLayout>
+
+        <com.example.chat.custom_views.NoChangingBackgroundTextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            app:errorEnabled="true"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toTopOf="@id/tilConfirmPassword"
+            app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+            app:passwordToggleDrawable="@drawable/ic_password"
+            app:passwordToggleEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_border"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorGrey"
+                android:textSize="17sp" />
+        </com.example.chat.custom_views.NoChangingBackgroundTextInputLayout>
+
+        <com.example.chat.custom_views.NoChangingBackgroundTextInputLayout
+            android:id="@+id/tilConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            app:errorEnabled="true"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toTopOf="@+id/bSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+            app:passwordToggleDrawable="@drawable/ic_password"
+            app:passwordToggleEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_border"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorGrey"
+                android:textSize="17sp" />
+        </com.example.chat.custom_views.NoChangingBackgroundTextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/black_button_border"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@id/tvSignIn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilConfirmPassword"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tvSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/sign_in"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bSignUp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

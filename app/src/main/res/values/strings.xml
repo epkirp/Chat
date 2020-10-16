@@ -1,0 +1,87 @@
+<resources>
+    //welcome fragment
+    <string name="app_name">Chat</string>
+    <string name="welcome">Welcome!</string>
+    <string name="create_account">Create an account</string>
+    <string name="have_an_account">I already have an account</string>
+
+    //sign in fragment
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="help_sign_in">Forgot login or password?</string>
+
+    //sign up fragment
+    <string name="user_name">User Name</string>
+    <string name="birthday">Birthday</string>
+    <string name="old_password">Old password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="input_important">*</string>
+    <string name="cancel">Cancel</string>
+    <string name="successful_sign_up">Successful sign up!</string>
+
+    //sign up errors
+    <string name="server_error">server error</string>
+    <string name="error_empty_log_in">field is empty</string>
+
+    //bottom navigation menu
+    <string name="menu_home">Home</string>
+    <string name="menu_select_image">Select image</string>
+    <string name="menu_profile">Profile</string>
+
+    //no pictures placeholder
+    <string name="no_pictures_title">Sorry!</string>
+    <string name="no_pictures_text">There is no pictures.\nPlease come back later</string>
+
+    //gallery
+    <string name="loading">Loading…</string>
+
+    //view pager titles (gallery)
+    <string name="new_title">New</string>
+    <string name="popular_title">Popular</string>
+
+    //search hint
+    <string name="search_hint">Search</string>
+
+    //select image menu
+    <string name="take_photo">Take photo</string>
+    <string name="select_image_in_gallery">Select image from gallery</string>
+
+    //upload image
+    <string name="name_hint">Name</string>
+    <string name="description_hint">Description</string>
+    <string name="add">Add</string>
+    <string name="moderate_publication">Publication has been moderated</string>
+
+    //profile settings
+    <string name="save">Save</string>
+    <string name="upload_photo">Upload photo</string>
+    <string name="personal_data">Personal data</string>
+    <string name="email_address">E-mail address</string>
+    <string name="new_password">New password</string>
+    <string name="delete_account">You can delete your account</string>
+    <string name="delete_account_part_1">You can\u0020</string>
+    <string name="delete_account_part_2">delete your account</string>
+    <string name="sign_out">Sign out</string>
+    <string name="successful_message">Successful!</string>
+
+    //sign in errors
+    <string name="error_empty_email">Empty email</string>
+    <string name="error_empty_password">Empty password</string>
+    <string name="error_password_min_length">Length &lt; 5 </string>
+    <string name="error_bad_email">Bad email</string>
+
+    //sign up errors
+    <string name="error_empty_user_name">Empty user name</string>
+    <string name="error_birthday">Bad birthday</string>
+    <string name="error_confirm_password">Passwords are not equals</string>
+
+    //permissions
+    <string name="allow_storage">You must give permission to select images from the gallery</string>
+    <string name="ok">OK</string>
+
+    //chats
+    <string name="start_a_new_message">Start a new message</string>
+    <string name="no_messages_text">There is no messages.</string>
+</resources>

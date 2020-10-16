@@ -1,0 +1,138 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitleSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:text="@string/sign_in"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/vLine"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <View
+            android:id="@+id/vLine"
+            android:layout_width="94dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="32dp"
+            android:background="@color/colorPink"
+            app:layout_constraintBottom_toTopOf="@+id/tilEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleSignIn" />
+
+        <com.example.chat.custom_views.NoChangingBackgroundTextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toTopOf="@id/tilPassword"
+            app:layout_constraintTop_toBottomOf="@+id/vLine">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_border"
+                android:drawableEnd="@drawable/ic_email"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="test@test.ru"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorGrey"
+                android:textSize="17sp" />
+        </com.example.chat.custom_views.NoChangingBackgroundTextInputLayout>
+
+        <com.example.chat.custom_views.NoChangingBackgroundTextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="0dp"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toTopOf="@id/bSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+            app:passwordToggleDrawable="@drawable/ic_password"
+            app:passwordToggleEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_border"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="123456"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorGrey"
+                android:textSize="17sp" />
+
+        </com.example.chat.custom_views.NoChangingBackgroundTextInputLayout>
+
+        <TextView
+            android:id="@+id/tvHelpSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="end|top"
+            android:paddingEnd="16dp"
+            android:text="@string/help_sign_in"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/bSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/black_button_border"
+            android:text="@string/sign_in"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@id/tvSignUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bSignIn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
